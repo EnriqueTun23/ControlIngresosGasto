@@ -1,0 +1,23 @@
+﻿@model ControlIngresosGasto.Models.Especialidad
+
+<h4>Especialidad</h4>
+
+<div>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly">
+        </div>
+        <input type="hidden"  asp-for="idEspecialidad"/>
+        <div>
+            <label asp-for="Descripcion"></label>
+            <input asp-for="Descripcion" />
+            <span asp-validation-for="Descripcion"></span>
+        </div>
+        <div>
+            <input type="submit" value="Grabar" class="btn btn-success" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Volver</a>
+</div>

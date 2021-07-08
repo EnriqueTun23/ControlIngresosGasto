@@ -1,0 +1,37 @@
+﻿@model IEnumerable< ControlIngresosGasto.Models.Especialidad>
+
+
+    <p>
+        <a asp-action="Create" class="btn btn-dark">Nueva Especialidad </a>
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descripcion)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @* Aqui comentario *@
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.idEspecialidad">
+                            Editar
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.idEspecialidad">
+                            Eliminar
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
